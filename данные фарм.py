@@ -4,7 +4,6 @@ import time
 import mouse
 import comands
 
-wait_time_press = 0.5 #Время между нажатий клавишь
 RUN = True
 
 def stop():
@@ -18,19 +17,15 @@ time.sleep(5)
 
 while RUN:
     #Выбор корабля носителя
-    comands.scan(wait_time_press)
-    time.sleep(1)
+    comands.scan()
 
     #Выбор передатчика данных
-    comands.scan(wait_time_press)
-    time.sleep(1)
+    comands.scan()
 
     #Взлом
-    comands.vzlom(wait_time_press)
-    time.sleep(30)
+    comands.vzlom()
 
     #меню и выход
-    comands.perezahod(wait_time_press)
-    time.sleep(30)
+    comands.perezahod()
 
 print('Программа остановлена')
